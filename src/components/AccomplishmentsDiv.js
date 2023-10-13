@@ -4,7 +4,7 @@ import HousieGameImg from "../Housie-Game-Img.png";
 import Portfolio from "../portfolio-img.png";
 // import { Link as ScrollLink } from "react-scroll";
 import { FaArrowUp } from "react-icons/fa";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import FlamesImg from "../flame-img.png";
 let accomplishmentsContent = [

@@ -1,6 +1,6 @@
 import "./HomeDiv.css";
 import profileImg from "../profile-img.JPG";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { FaChevronDown } from "react-icons/fa";
 
 export function HomeDiv() {
