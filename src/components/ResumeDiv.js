@@ -1,6 +1,7 @@
 import "./ResumeDiv.css";
 import { useState } from "react";
 import { Link } from "react-scroll";
+import JsLogo from "../js-icon.svg";
 
 const resumeContent = {
   smallIntro:
@@ -11,7 +12,7 @@ const resumeContent = {
       fieldOfStudy: "Bachelor of Technology",
       city: "Vellore",
       country: "India",
-      keyPoints: ["Pursuing Course CSE Data Science", "CGPA: 8️⃣.7️⃣"],
+      keyPoints: ["Pursuing Course CSE Data Science", "CGPA: 8.7"],
       yearOfJoin: "2021",
       endYear: "2025",
     },
@@ -20,7 +21,7 @@ const resumeContent = {
       fieldOfStudy: "Intermediate",
       city: "Vijayawada",
       country: "India",
-      keyPoints: ["Marks: 9️⃣6️⃣8️⃣"],
+      keyPoints: ["Marks: 968/1000"],
       yearOfJoin: "2019",
       endYear: "2021",
     },
@@ -29,12 +30,12 @@ const resumeContent = {
       fieldOfStudy: "School",
       city: "Gudivada",
       country: "India",
-      keyPoints: ["GPA: 9️⃣.8️⃣"],
+      keyPoints: ["GPA: 9.8"],
       endYear: "2019",
     },
   ],
   skills: [
-    "🟨 JavaScript",
+    "JavaScript",
     "⚛️ React",
     "🗃️ Oracle SQL",
     "🐍 Python",
@@ -104,7 +105,7 @@ function Name({ name, onIsOpen, isOpen }) {
     onIsOpen(isOpen ? null : name);
   }
   // console.log(name);
-  let newName = name === "smallIntro" ? "Small Into" : name;
+  let newName = name === "smallIntro" ? "Small Intro" : name;
   return (
     <div onClick={() => handleIsOpen()} className="resume-content-name">
       {newName.replace(newName[0], newName[0].toUpperCase())}
@@ -221,7 +222,9 @@ function Interests({ isOpen, contentIn }) {
 function PointUse({ point }) {
   return (
     <div>
-      <span className="number-resume"></span>
+      {point === "JavaScript" ? (
+        <img className="js-icon" src={JsLogo} alt={"Js"} />
+      ) : null}
       <span>{point}</span>
     </div>
   );
